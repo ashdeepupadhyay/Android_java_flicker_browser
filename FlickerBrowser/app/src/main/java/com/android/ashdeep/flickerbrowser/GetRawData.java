@@ -43,9 +43,12 @@ public class GetRawData {
         this.mDownloadStatus=DownloadStatus.PROCESSING;
         DownloadRawData downloadRawData=new DownloadRawData();
         downloadRawData.execute(mRawURL);
-
-
     }
+
+    public void setmRawURL(String mRawURL) {
+        this.mRawURL = mRawURL;
+    }
+
     public class DownloadRawData extends AsyncTask<String,Void,String>
     {
         protected void onPostExecute(String webData) {

@@ -16,7 +16,9 @@ public class MainActivity extends AppCompatActivity {
                     .replace(R.id.container, MainFragment.newInstance())
                     .commitNow();
         }
-        GetRawData theRawData=new GetRawData("https://api.flickr.com/services/feeds/photos_public.gne?tags=android,lollipop&format=json&nojsoncallback=1");
-        theRawData.execute();
+        //GetRawData theRawData=new GetRawData("https://api.flickr.com/services/feeds/photos_public.gne?tags=android,lollipop&format=json&nojsoncallback=1");
+        //theRawData.execute();
+        GetFlickerJsonData jsonData=new GetFlickerJsonData("android,lollipop",true);
+        jsonData.execute();
     }
 }
