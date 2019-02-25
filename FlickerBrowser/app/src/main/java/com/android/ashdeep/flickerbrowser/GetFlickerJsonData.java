@@ -22,6 +22,10 @@ public class GetFlickerJsonData extends GetRawData {
         mPhotos=new ArrayList<Photo>();
     }
 
+    public List<Photo> getMPhotos() {
+        return mPhotos;
+    }
+
     public void execute()
     {
         super.setmRawURL(mDestinationUri.toString());
@@ -100,7 +104,9 @@ public class GetFlickerJsonData extends GetRawData {
 
         @Override
         protected String doInBackground(String... params) {
-            return super.doInBackground(params);
+
+            String[]par={mDestinationUri.toString()};
+            return super.doInBackground(par);
         }
     }
 }
